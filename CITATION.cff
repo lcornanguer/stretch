@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use STRETCH, please cite the NeurIPS paper below."
+type: software
+title: "STRETCH"
+version: 0.1.0
+date-released: 2026-10-07
+license: BSD-3-Clause
+authors:
+  - family-names: Cornanguer
+    given-names: Lénaïg
+  - family-names: Kaltenpoth
+    given-names: David
+  - family-names: Vreeken
+    given-names: Jilles
+preferred-citation:
+  type: conference-paper
+  title: "Causal Discovery under Time-Varying Delays"
+  year: 2026
+  conference:
+    name: "Advances in Neural Information Processing Systems"
+  authors:
+    - family-names: Cornanguer
+      given-names: Lénaïg
+    - family-names: Kaltenpoth
+      given-names: David
+    - family-names: Vreeken
+      given-names: Jilles
