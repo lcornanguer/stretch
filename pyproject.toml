@@ -34,3 +34,8 @@ stretch = "stretch.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/lcornanguer/stretch"
+Repository = "https://github.com/lcornanguer/stretch"
+Issues = "https://github.com/lcornanguer/stretch/issues"
