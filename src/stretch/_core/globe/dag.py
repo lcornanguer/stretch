@@ -81,7 +81,7 @@ class DAG:
 
     def remove_edge(self, i, j):
         """
-        Remove Xi -> Xj. This will also update the score for Xj to be that of Xpa(j)\Xi -> Xj.
+        Remove Xi -> Xj. This will also update the score for Xj to be that of Xpa(j)\\Xi -> Xj.
 
         :param i: parent
         :param j: child

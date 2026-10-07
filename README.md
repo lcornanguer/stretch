@@ -1,11 +1,15 @@
 # STRETCH
 
-STRETCH discovers causal graphs in time series when the delay from a cause to its effect changes over source time.
-This repository contains the reusable implementation accompanying the NeurIPS 2026 paper *Causal Discovery under Time-Varying Delays*.
+STRETCH is a causal discovery method for time series where the delay from a cause to its effect changes over time.
+This repository contains the reusable implementation accompanying the NeurIPS 2026 paper *Causal Discovery under Time-Varying Delays* (see citation below).
 
 ## Five-minute example
 
-Install the package from a release wheel, then fit a labelled Pandas DataFrame:
+Install the package, then fit a labelled Pandas DataFrame:
+
+```console
+pip install stretch-tscd
+```
 
 ```python
 import numpy as np
@@ -51,12 +55,6 @@ stretch observations.csv --search greedy --max-lag 6 --output-dir results
 ```
 
 The command writes a labelled adjacency matrix, tidy source-time-indexed delays, exact compressed delay arrays, and run metadata.
-
-## Scientific behavior
-
-The numerical core is derived from the exact revision used by the paper evaluation.
-The public defaults match the evaluation adapter rather than the older internal constructor defaults.
-See [`CORE_PROVENANCE.md`](CORE_PROVENANCE.md) for the audited source revisions and file checksums.
 
 ## Citation
 
