@@ -26,6 +26,11 @@ def _parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--max-lag", type=int, default=6)
     parser.add_argument("--max-parents", type=int)
+    parser.add_argument(
+        "--allow-cycles",
+        action="store_true",
+        help="allow cyclic summary graphs during exhaustive search",
+    )
     parser.add_argument("--output-dir", type=Path, default=Path("stretch-results"))
     parser.add_argument("--verbose", action="store_true")
     return parser
@@ -48,6 +53,7 @@ def main(argv: list[str] | None = None) -> int:
         search=args.search,
         max_lag=args.max_lag,
         max_parents=args.max_parents,
+        allow_cycles=args.allow_cycles,
         verbose=args.verbose,
     ).fit_result(frame)
 
@@ -72,6 +78,7 @@ def main(argv: list[str] | None = None) -> int:
         "input_sha256": _sha256(args.input),
         "search": result.search,
         "max_lag": result.max_lag,
+        "allow_cycles": args.allow_cycles,
         "variables": [str(name) for name in result.variable_names],
         "delay_arrays": edge_records,
     }

@@ -41,6 +41,7 @@ class STRETCH:
         search: str = "greedy",
         max_lag: int = 6,
         max_parents: int | None = None,
+        allow_cycles: bool = False,
         use_lasso: bool = False,
         init_with_child_centric: bool = False,
         pruning_threshold: float = 0.0,
@@ -52,6 +53,7 @@ class STRETCH:
         self.search = search
         self.max_lag = max_lag
         self.max_parents = max_parents
+        self.allow_cycles = allow_cycles
         self.use_lasso = use_lasso
         self.init_with_child_centric = init_with_child_centric
         self.pruning_threshold = pruning_threshold
@@ -137,6 +139,7 @@ class STRETCH:
                 true_dag=None,
                 global_params=global_params,
                 max_pa=self.max_parents,
+                allow_cycles=self.allow_cycles,
                 verbosity=self.verbose,
             )
             graph = fitted.main()
@@ -172,6 +175,8 @@ class STRETCH:
                 raise TypeError("max_parents must be an integer or None")
             if self.max_parents < 0:
                 raise ValueError("max_parents must be non-negative")
+        if not isinstance(self.allow_cycles, bool):
+            raise TypeError("allow_cycles must be a boolean")
         if not 0 <= self.pruning_threshold <= 1:
             raise ValueError("pruning_threshold must lie between zero and one")
         if self.regression not in {"poly", "spline", "fourier"}:

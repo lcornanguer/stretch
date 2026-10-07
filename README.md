@@ -42,6 +42,7 @@ STRETCH supports:
 - `search="topic"`, the STRETCH-TOPIC paper variant.
 
 Exhaustive search is intended for small variable sets and may become impractical beyond five variables.
+Set `allow_cycles=True` only when the application permits a cyclic summary graph; the default remains a DAG.
 
 ## CSV command
 
