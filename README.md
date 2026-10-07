@@ -56,7 +56,7 @@ The command writes a labelled adjacency matrix, tidy source-time-indexed delays,
 
 The numerical core is derived from the exact revision used by the paper evaluation.
 The public defaults match the evaluation adapter rather than the older internal constructor defaults.
-See [`CORE_PROVENANCE.md`](CORE_PROVENANCE.md) and the golden regression tests for details.
+See [`CORE_PROVENANCE.md`](CORE_PROVENANCE.md) for the audited source revisions and file checksums.
 
 ## Citation
 
