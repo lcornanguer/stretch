@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use STRETCH, please cite the NeurIPS paper below."
 type: software
 title: "STRETCH"
-version: 0.1.0
-date-released: 2026-10-07
+version: 0.1.1
+date-released: 2026-10-08
 license: BSD-3-Clause
 authors:
   - family-names: Cornanguer

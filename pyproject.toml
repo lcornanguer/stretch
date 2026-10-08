@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "stretch-tscd"
 version = "0.1.0"
-description = "Causal discovery under source-time-varying causal delays"
+description = "Causal discovery under for nonstationary time series with varying causal delays"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "BSD-3-Clause"
