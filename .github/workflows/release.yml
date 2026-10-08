@@ -4,6 +4,13 @@ on:
   release:
     types: [published]
 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to publish
+        required: true
+        default: v0.1.0
+
 permissions:
   contents: read
 
@@ -16,6 +23,7 @@ jobs:
       - name: Check out tagged source
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
           persist-credentials: false
 
       - name: Set up Python
